@@ -1,6 +1,6 @@
 
 header {
-    flex: 0 0 auto;
+    grid-column: 1 / 4;
     background-color: rgb(6, 6, 48);
 }
 
@@ -32,14 +32,14 @@ nav {
     padding: 20px; 
 }
 
-header ul{
+nav ul{
     display: flex;
     justify-content: space-evenly;
     margin: 0px;
     list-style: none;
 }
 
-header a {
+nav a {
     text-decoration: none;
     color: white;
     border: 1px solid white;
@@ -47,7 +47,7 @@ header a {
     padding: 5px 15px;
 }
 
-header a:hover {
+nav a:hover {
     background-color: white;
     color: black;
 }
@@ -55,4 +55,57 @@ header a:hover {
 #iniciar_sesion {
     float: right;
     margin: 20px 25px 0px 0px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 5px 15px;
+}
+
+#iniciar_sesion:hover {
+    background-color: white;
+    color: black;
+}
+
+@media (min-width: 1200px) {
+    nav {
+        grid-column: 1 / 4;
+        grid-row: 2;
+    }
+    
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    nav {
+        grid-column: 1 / 2;
+        grid-row: 2 / 4;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 25px 0px;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    nav {
+        grid-column: 1 / 4;
+        grid-row: 2;
+    }
+    nav a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:767px) {
+    nav {
+        grid-column: 1 / 4;
+        grid-row: 2;
+    }
+    nav a {
+        font-size: 14px;
+    }
 }

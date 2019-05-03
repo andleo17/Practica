@@ -1,18 +1,13 @@
 
-html {
-    height: 100%;
-}
-
 body {
     font-family: 'Lato', sans-serif;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     margin: 0px;
+    grid-template-columns: 20% auto auto;
+    grid-template-rows: auto auto 100% auto;
 }
 
 .contenedor {
-    flex: 1 0 auto;
     display: flex;
     background-color: rgb(223, 217, 217);
 }
@@ -63,4 +58,32 @@ aside a {
     text-decoration: none;
     color: black;
     font-size: 14px;
+}
+
+@media (min-width: 1200px) {
+    .contenedor {
+        grid-column: 1 / 4;
+        grid-row: 3;
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    .contenedor {
+        grid-column: 2 / 4;
+        grid-row: 2 / 4;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .contenedor {
+        grid-column: 1 / 4;
+        grid-row: 3;
+    }
+}
+
+@media (max-width:767px) {
+    .contenedor {
+        grid-column: 1 / 4;
+        grid-row: 3;
+    }
 }
